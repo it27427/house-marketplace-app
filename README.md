@@ -1,6 +1,6 @@
 # House Marketplace
 
-Find and list houses for sale or for rent. This is a React / Firebase v9 project.
+Find and list houses for sale or for rent. This is a React 18 and Firebase v9 project.
 
 ## Usage
 
