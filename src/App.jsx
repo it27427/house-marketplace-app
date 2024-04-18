@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Explore from './pages/Explore';
+import Explore from '@/pages/Explore';
 
 const App = () => {
   return (
