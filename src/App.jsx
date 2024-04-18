@@ -1,8 +1,13 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Explore from './pages/Explore';
+
 const App = () => {
   return (
-    <>
-      <h1>Marketplace App</h1>
-    </>
+    <Router>
+      <Routes>
+        <Route path='/' element={<Explore />} />
+      </Routes>
+    </Router>
   );
 };
 
