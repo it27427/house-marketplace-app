@@ -1,8 +1,15 @@
-# React + Vite
+# House Marketplace
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Find and list houses for sale or for rent. This is a React / Firebase v9 project.
 
-Currently, two official plugins are available:
+## Usage
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Geolocation
+
+The listings use Google geocoding to get the coords from the address field. You need to either rename .env.example to .env and add your Google Geocode API key OR in the **CreateListing.jsx** file you can set **geolocationEnabled** to "false" and it will add a lat/lng field to the form.
+
+### Run
+
+```bash
+npm run dev
+```
