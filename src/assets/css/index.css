@@ -28,6 +28,10 @@ button {
   border: none;
 }
 
+figure {
+  margin: 0;
+}
+
 .input,
 .passwordInput,
 .emailInput,
@@ -847,14 +851,33 @@ button {
 }
 
 .btn-back {
-  background: #00cc66;
+  background: #00bc66;
   color: #ffffff;
+  border: solid .125rem #00bc66;
   border-radius: .5rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: .5rem 1.5rem;
+  gap: .5rem;
+  padding: .85rem 1.5rem;
   text-align: center;
+  font-weight: 600;
+  font-size: .875rem;
+  transition: all 500ms ease-in;
+}
+
+.btn-back:hover {
+  background: #ffffff;
+  color: #00bc66;
+}
+
+.errorcomp {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
 
 .flex-column-center {
@@ -863,4 +886,16 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.errorthumb {
+  width: 20rem;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.errortitle {
+  color: #cc0066;
 }
