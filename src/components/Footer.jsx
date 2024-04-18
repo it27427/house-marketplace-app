@@ -1,9 +1,9 @@
-import React from 'react';
+import Navbar from './Navbar';
 
 const Footer = () => {
   return (
-    <footer>
-      <h2>Footer Component</h2>
+    <footer className='navbar'>
+      <Navbar />
     </footer>
   );
 };
