@@ -44,6 +44,12 @@ const SignIn = () => {
                 value={password}
                 onChange={onChange}
               />
+
+              <img
+                src={visibilityIcon}
+                alt='show-password'
+                className='showPassword'
+              />
             </div>
           </form>
         </main>
