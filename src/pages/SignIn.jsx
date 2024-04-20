@@ -14,9 +14,11 @@ const SignIn = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
-      <h2>Sign In Page</h2>
-    </div>
+    <>
+      <div className='pageContainer'>
+        <h2>Sign In Page</h2>
+      </div>
+    </>
   );
 };
 
