@@ -33,6 +33,18 @@ const SignIn = () => {
               value={email}
               onChange={onChange}
             />
+
+            <div className='passwordInputDiv'>
+              <input
+                type={showPassword ? 'text' : 'password'}
+                id='password'
+                className='passwordInput'
+                placeholder='Enter Password'
+                autoComplete='off'
+                value={password}
+                onChange={onChange}
+              />
+            </div>
           </form>
         </main>
       </div>
