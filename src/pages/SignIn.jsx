@@ -13,12 +13,28 @@ const SignIn = () => {
 
   const navigate = useNavigate();
 
+  const onChange = () => {};
+
   return (
     <>
       <div className='pageContainer'>
         <header>
           <h2 className='pageHeader'>Welcome Back!</h2>
         </header>
+
+        <main>
+          <form>
+            <input
+              type='email'
+              id='email'
+              className='emailInput'
+              placeholder='Enter Email Address'
+              autoComplete='off'
+              value={email}
+              onChange={onChange}
+            />
+          </form>
+        </main>
       </div>
     </>
   );
