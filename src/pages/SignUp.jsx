@@ -6,10 +6,11 @@ import visibilityIcon from '@/assets/images/svg/visibilityIcon.svg';
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
+    name: '',
     email: '',
     password: '',
   });
-  const { email, password } = formData;
+  const { name, email, password } = formData;
 
   const navigate = useNavigate();
 
@@ -30,6 +31,16 @@ const SignUp = () => {
 
         <main>
           <form>
+            <input
+              type='text'
+              id='name'
+              className='nameInput'
+              placeholder='Enter Full Name'
+              autoComplete='off'
+              value={name}
+              onChange={onChange}
+            />
+
             <input
               type='email'
               id='email'
@@ -59,9 +70,9 @@ const SignUp = () => {
               />
             </div>
 
-            <div className='signInBar'>
-              <p className='signInText'>Sign Up</p>
-              <button type='submit' className='signInButton'>
+            <div className='signUpBar'>
+              <p className='signUpText'>Sign Up</p>
+              <button type='submit' className='signUpButton'>
                 <ArrowRightIcon fill='#ffffff' width='24px' height='24px' />
               </button>
             </div>
