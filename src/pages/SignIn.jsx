@@ -16,7 +16,9 @@ const SignIn = () => {
   return (
     <>
       <div className='pageContainer'>
-        <header className='pageHeader'></header>
+        <header>
+          <p className='pageHeader'>Welcome Back!</p>
+        </header>
       </div>
     </>
   );
