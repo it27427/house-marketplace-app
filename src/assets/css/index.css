@@ -28,7 +28,23 @@ button {
   border: none;
 }
 
-figure {
+a, abbr, acronym, address, applet,
+article, aside, audio, b, big,
+blockquote, button, body, canvas,
+caption, center, cite, code, dd,
+del, details, dfn, div, dl, dt,
+em, embed, fieldset, figcaption,
+figure, footer, form, header,
+hgroup, html, i, input, iframe,
+img, ins, kbd, label, legend, li,
+mark, menu, main, nav, object, ol,
+output, option, p, pre, q, ruby,
+s, samp, section, small, span,
+strike, strong, sub, summary,
+select, sup, table, tbody, td,
+tfoot, th, thead, time, tr, tt,
+textarea, u, ul, var, video,
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 

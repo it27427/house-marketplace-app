@@ -17,7 +17,7 @@ const SignIn = () => {
     <>
       <div className='pageContainer'>
         <header>
-          <p className='pageHeader'>Welcome Back!</p>
+          <h2 className='pageHeader'>Welcome Back!</h2>
         </header>
       </div>
     </>
