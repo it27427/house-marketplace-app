@@ -877,7 +877,7 @@ figure {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 0rem 2rem 5rem;
 }
 
 .flex-column-center {
@@ -889,8 +889,8 @@ figure {
 }
 
 .errorthumb {
-  width: 20rem;
-  height: 20rem;
+  width: 18.75rem;
+  height: 18.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
