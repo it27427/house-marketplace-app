@@ -4,6 +4,11 @@ import { ReactComponent as ArrowRightIcon } from '@/assets/images/svg/keyboardAr
 import visibilityIcon from '@/assets/images/svg/visibilityIcon.svg';
 
 const SignIn = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  });
   const navigate = useNavigate();
 
   return (
