@@ -9,6 +9,8 @@ const SignIn = () => {
     email: '',
     password: '',
   });
+  const { email, password } = formData;
+
   const navigate = useNavigate();
 
   return (
