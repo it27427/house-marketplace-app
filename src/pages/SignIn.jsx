@@ -56,6 +56,13 @@ const SignIn = () => {
             <Link to='/forgot-password' className='forgotPasswordLink'>
               Forgot Password?
             </Link>
+
+            <div className='signInBar'>
+              <p className='signInText'>Sign In</p>
+              <button type='submit' className='signInButton'>
+                <ArrowRightIcon fill='#ffffff' width='24px' height='24px' />
+              </button>
+            </div>
           </form>
         </main>
       </div>
