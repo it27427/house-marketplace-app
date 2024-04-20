@@ -174,6 +174,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2rem;
 }
 
+
 .navbar {
   position: fixed;
   left: 0;
@@ -325,12 +326,24 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-.registerLink {
+.authtext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
   margin-top: 4rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.signtext {
+  color: #222222;
+  font-weight: 500;
+}
+
+.registerLink {
   color: #00cc66;
   font-weight: 600;
-  text-align: center;
-  margin-bottom: 3rem;
 }
 
 @media (min-width: 1217px) {

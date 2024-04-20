@@ -64,6 +64,15 @@ const SignIn = () => {
               </button>
             </div>
           </form>
+
+          {/* GOOGLE oAUTH */}
+          <div className='authtext'>
+            <span className='signtext'>Don't have any account?</span>
+
+            <Link to='/sign-up' className='registerLink'>
+              Sign Up
+            </Link>
+          </div>
         </main>
       </div>
     </>
