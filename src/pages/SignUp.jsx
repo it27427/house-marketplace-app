@@ -28,8 +28,24 @@ const SignUp = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    try {
+      const auth = getAuth();
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
+      updateProfile(auth.currentUser, {
+        displayName: name,
+      });
+      navigate('/');
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
