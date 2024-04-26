@@ -4,6 +4,7 @@ import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { toast } from 'react-toastify';
 import { ReactComponent as ArrowRightIcon } from '@/assets/images/svg/keyboardArrowRightIcon.svg';
 import visibilityIcon from '@/assets/images/svg/visibilityIcon.svg';
+import OAuth from '@/components/OAuth';
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -92,6 +93,8 @@ const SignIn = () => {
           </form>
 
           {/* GOOGLE oAUTH */}
+          <OAuth />
+
           <div className='authtext'>
             <span className='signtext'>Don't have any account?</span>
 
