@@ -20,12 +20,16 @@ const SignUp = () => {
 
   const navigate = useNavigate();
 
-  const onChange = (e) => {
+  const handleChange = (e) => {
     e.preventDefault();
     setFormData((prevState) => ({
       ...prevState,
       [e.target.id]: e.target.value,
     }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
   };
 
   return (
@@ -36,7 +40,7 @@ const SignUp = () => {
         </header>
 
         <main>
-          <form>
+          <form onSubmit={handleSubmit}>
             <input
               type='text'
               id='name'
@@ -44,7 +48,7 @@ const SignUp = () => {
               placeholder='Enter Full Name'
               autoComplete='off'
               value={name}
-              onChange={onChange}
+              handleChange={handleChange}
             />
 
             <input
@@ -54,7 +58,7 @@ const SignUp = () => {
               placeholder='Enter Email Address'
               autoComplete='off'
               value={email}
-              onChange={onChange}
+              handleChange={handleChange}
             />
 
             <div className='passwordInputDiv'>
@@ -65,7 +69,7 @@ const SignUp = () => {
                 placeholder='Enter Password'
                 autoComplete='off'
                 value={password}
-                onChange={onChange}
+                handleChange={handleChange}
               />
 
               <img
