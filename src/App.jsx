@@ -12,21 +12,27 @@ import SignUp from '@/pages/SignUp';
 import ForgotPassword from '@/pages/ForgotPassword';
 import NotFound from '@/pages/NotFound';
 
+import { ToastContainer } from 'react-toastify';
+
 const App = () => {
   return (
-    <Router>
-      <Footer />
+    <>
+      <Router>
+        <Footer />
 
-      <Routes>
-        <Route path='/' element={<Explore />} />
-        <Route path='/offers' element={<Offers />} />
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/sign-in' element={<SignIn />} />
-        <Route path='/sign-up' element={<SignUp />} />
-        <Route path='/forgot-password' element={<ForgotPassword />} />
-        <Route path='/*' element={<NotFound />} />
-      </Routes>
-    </Router>
+        <Routes>
+          <Route path='/' element={<Explore />} />
+          <Route path='/offers' element={<Offers />} />
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/sign-in' element={<SignIn />} />
+          <Route path='/sign-up' element={<SignUp />} />
+          <Route path='/forgot-password' element={<ForgotPassword />} />
+          <Route path='/*' element={<NotFound />} />
+        </Routes>
+      </Router>
+
+      <ToastContainer />
+    </>
   );
 };
 
