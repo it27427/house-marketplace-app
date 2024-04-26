@@ -64,7 +64,7 @@ const SignUp = () => {
               placeholder='Enter Full Name'
               autoComplete='off'
               value={name}
-              handleChange={handleChange}
+              onChange={handleChange}
             />
 
             <input
@@ -74,7 +74,7 @@ const SignUp = () => {
               placeholder='Enter Email Address'
               autoComplete='off'
               value={email}
-              handleChange={handleChange}
+              onChange={handleChange}
             />
 
             <div className='passwordInputDiv'>
@@ -85,7 +85,7 @@ const SignUp = () => {
                 placeholder='Enter Password'
                 autoComplete='off'
                 value={password}
-                handleChange={handleChange}
+                onChange={handleChange}
               />
 
               <img
