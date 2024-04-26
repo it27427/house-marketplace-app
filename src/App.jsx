@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // IMPORT-COMPONENTS
 import Footer from '@/components/Footer';
+import PrivateRoute from '@/components/PrivateRoute';
 
 // IMPORT-PAGES
 import Explore from '@/pages/Explore';
