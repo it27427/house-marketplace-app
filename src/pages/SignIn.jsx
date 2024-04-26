@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { ReactComponent as ArrowRightIcon } from '@/assets/images/svg/keyboardArrowRightIcon.svg';
 import visibilityIcon from '@/assets/images/svg/visibilityIcon.svg';
 
@@ -13,12 +14,25 @@ const SignIn = () => {
 
   const navigate = useNavigate();
 
-  const onChange = (e) => {
+  const handleChange = (e) => {
     e.preventDefault();
     setFormData((prevState) => ({
       ...prevState,
       [e.target.id]: e.target.value,
     }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const auth = getAuth();
+    const userCredential = await signInWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    if (userCredential.user) {
+      navigate('/');
+    }
   };
 
   return (
@@ -29,7 +43,7 @@ const SignIn = () => {
         </header>
 
         <main>
-          <form>
+          <form onSubmit={handleSubmit}>
             <input
               type='email'
               id='email'
@@ -37,7 +51,7 @@ const SignIn = () => {
               placeholder='Enter Email Address'
               autoComplete='off'
               value={email}
-              onChange={onChange}
+              onChange={handleChange}
             />
 
             <div className='passwordInputDiv'>
@@ -48,7 +62,7 @@ const SignIn = () => {
                 placeholder='Enter Password'
                 autoComplete='off'
                 value={password}
-                onChange={onChange}
+                onChange={handleChange}
               />
 
               <img
