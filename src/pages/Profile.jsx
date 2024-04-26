@@ -1,9 +1,12 @@
 import { useState } from 'react';
-import { getAuth } from 'firebase/auth';
+import { getAuth, updateProfile } from 'firebase/auth';
+import { updateDoc } from 'firebase/firestore';
+import { db } from '@/firebase.config';
 import { useNavigate, Link } from 'react-router-dom';
 
 const Profile = () => {
   const auth = getAuth();
+  const [changeDetails, setChangeDetails] = useState(false);
   const [formData, setformData] = useState({
     name: auth.currentUser.displayName,
     email: auth.currentUser.email,
