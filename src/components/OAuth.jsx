@@ -9,7 +9,24 @@ const OAuth = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleGoogleClick = () => {};
+  const handleGoogleClick = async () => {
+    try {
+      const auth = getAuth();
+      const provider = new GoogleAuthProvider();
+      const result = signInWithPopup(auth, provider);
+      const user = result.user;
+
+      // CHECK FOR USER
+      const docRef = doc(db, 'users', user.uid);
+      const docSnap = await getDoc(docRef);
+
+      // IF USER DOESN'T EXISTS, CREATE-USER
+      if (!docSnap.exists()) {
+      }
+    } catch (error) {
+      toast.error('');
+    }
+  };
 
   return (
     <div className='socialLogin'>
@@ -19,7 +36,7 @@ const OAuth = () => {
         type='button'
         className='socialIconDiv'
       >
-        <img src={googleIcon} alt='google-icon' />
+        <img src={googleIcon} alt='google-icon' className='socialIconImg' />
       </button>
     </div>
   );
