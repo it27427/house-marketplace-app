@@ -4,8 +4,8 @@ import { doc, updateDoc } from 'firebase/firestore';
 import { db } from '@/firebase.config';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import arrowRight from '../assets/images/svg/keyboardArrowRightIcon.svg';
-import homeIcon from '../assets/images/svg/homeIcon.svg';
+import arrowRight from '@/assets/images/svg/keyboardArrowRightIcon.svg';
+import homeIcon from '@/assets/images/svg/homeIcon.svg';
 
 const Profile = () => {
   const auth = getAuth();
