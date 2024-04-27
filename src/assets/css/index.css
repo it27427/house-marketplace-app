@@ -935,3 +935,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #cc0066;
   margin-bottom: 1.25rem;
 }
+
+.nolisting,
+.categoryListings {
+  margin-top: 1rem;
+}
