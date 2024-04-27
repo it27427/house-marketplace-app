@@ -270,6 +270,22 @@ const CreateListing = () => {
 
             {type === 'rent' && <p className='formPriceText'>$ / Month</p>}
           </div>
+
+          {offer && (
+            <>
+              <label className='formLabel'>Discounted Price</label>
+              <input
+                type='number'
+                className='formInputName'
+                id='discountedPrice'
+                value={discountedPrice}
+                onChange={onMutate}
+                minLength='50'
+                maxLength='750000000'
+                required={offer}
+              />
+            </>
+          )}
         </form>
       </main>
     </div>

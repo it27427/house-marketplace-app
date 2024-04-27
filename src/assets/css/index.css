@@ -843,9 +843,11 @@ h1, h2, h3, h4, h5, h6 {
 .formPriceDiv {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  width: 100%;
-  overflow: hidden;
+  gap: .5rem;
+}
+
+.formPriceDiv .formPriceText {
+  margin-left: 0;
 }
 
 .formPriceText {
