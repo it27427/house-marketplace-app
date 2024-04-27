@@ -13,7 +13,6 @@ import { db } from '@/firebase.config';
 import { toast } from 'react-toastify';
 import Spinner from '@/components/Spinner';
 import ListingItem from '@/components/ListingItem';
-import { list } from 'firebase/storage';
 
 const Category = () => {
   const [listings, setListings] = useState(null);

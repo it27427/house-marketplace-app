@@ -13,7 +13,6 @@ import { db } from '@/firebase.config';
 import { toast } from 'react-toastify';
 import Spinner from '@/components/Spinner';
 import ListingItem from '@/components/ListingItem';
-import { list } from 'firebase/storage';
 
 const Offers = () => {
   const [listings, setListings] = useState(null);
@@ -30,7 +29,7 @@ const Offers = () => {
         // CREATE A QUERY
         const q = query(
           listingsRef,
-          where('type', '==', params.categoryName),
+          where('offer', '==', true),
           orderBy('timestamp', 'desc'),
           limit(10)
         );
@@ -60,11 +59,7 @@ const Offers = () => {
   return (
     <div className='category'>
       <header>
-        <h3 className='pageHeader'>
-          {params.categoryName === 'rent'
-            ? 'Places for rent'
-            : 'Places for sale'}
-        </h3>
+        <h3 className='pageHeader'>Offers</h3>
       </header>
 
       {loading ? (
@@ -84,7 +79,7 @@ const Offers = () => {
           </main>
         </>
       ) : (
-        <p className='nolisting'>No listings for {params.categoryName}</p>
+        <p className='nolisting'>There are no current offers!</p>
       )}
     </div>
   );
