@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import Spinner from '@/components/Spinner';
+import { toast } from 'react-toastify';
 
 const CreateListing = () => {
   const [geolocationEnabled, setGeolocationEnabled] = useState(true);
@@ -58,8 +59,38 @@ const CreateListing = () => {
     };
   }, [isMounted]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+
+    if (discountedPrice >= regularPrice) {
+      setLoading(false);
+      toast.error('Discounted price needs to be less than regular price');
+      return;
+    }
+
+    if (images.length > 6) {
+      setLoading(false);
+      toast.error('Max 6 images');
+      return;
+    }
+
+    let geolocation = {};
+    let location;
+
+    if (geolocationEnabled) {
+      const response = await fetch(
+        `https://maps.googleapis.com/map/api/geocode/json?address=${address}&key=AIzaSyBB4FGKSy-ogfTRralMLUlSBUPNOkZb9O8`
+      );
+      const data = await response.json();
+      console.log(data);
+    } else {
+      geolocation.lat = latitude;
+      geolocation.lng = longitude;
+      location = address;
+    }
+
+    setLoading(false);
   };
 
   const onMutate = (e) => {
