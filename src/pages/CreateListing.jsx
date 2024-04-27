@@ -58,13 +58,23 @@ const CreateListing = () => {
     };
   }, [isMounted]);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   if (loading) {
     return <Spinner />;
   }
 
   return (
-    <div>
-      <h1>Create listing</h1>
+    <div className='profile'>
+      <header className='loginHeader'>
+        <h2 className='pageHeader'>Create a Listing</h2>
+      </header>
+
+      <main>
+        <form onSubmit={handleSubmit}></form>
+      </main>
     </div>
   );
 };
