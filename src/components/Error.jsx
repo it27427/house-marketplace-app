@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import error from '@/assets/images/error/error.svg';
 
 const Error = () => {
@@ -11,7 +12,7 @@ const Error = () => {
         </figure>
 
         <h2 className='errortitle'>{errorTitle}</h2>
-        <a href='/' className='btn-back'>
+        <Link to='/' className='btn-back'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='16'
@@ -26,7 +27,7 @@ const Error = () => {
             />
           </svg>
           Back To Home
-        </a>
+        </Link>
       </div>
     </div>
   );
