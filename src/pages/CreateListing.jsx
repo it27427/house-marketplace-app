@@ -62,7 +62,31 @@ const CreateListing = () => {
     e.preventDefault();
   };
 
-  const onMutate = () => {};
+  const onMutate = (e) => {
+    let boolean = null;
+
+    if (e.target.value === 'true') {
+      boolean = true;
+    }
+
+    if (e.target.value === 'false') {
+      boolean = false;
+    }
+
+    if (e.target.files) {
+      setFormData((prevState) => ({
+        ...prevState,
+        images: e.target.files,
+      }));
+    }
+
+    if (!e.target.files) {
+      setFormData((prevState) => ({
+        ...prevState,
+        [e.target.id]: boolean ?? e.target.value,
+      }));
+    }
+  };
 
   if (loading) {
     return <Spinner />;
