@@ -1,11 +1,13 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
+import rentCategoryImage from '@/assets/images/jpg/rentCategoryImage.jpg';
+import sellCategoryImage from '@/assets/images/jpg/sellCategoryImage.jpg';
 
-const Explores = () => {
+const Explore = () => {
   return (
-    <div>
+    <div className='explore'>
       <h1>Explore Page</h1>
     </div>
   );
 };
 
-export default Explores;
+export default Explore;
