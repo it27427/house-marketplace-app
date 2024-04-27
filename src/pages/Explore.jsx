@@ -5,7 +5,22 @@ import sellCategoryImage from '@/assets/images/jpg/sellCategoryImage.jpg';
 const Explore = () => {
   return (
     <div className='explore'>
-      <h1>Explore Page</h1>
+      <header>
+        <h2 className='pageHeader'>Explore</h2>
+      </header>
+
+      <main>
+        <h4 className='exploreCategoryHeading'>Categories</h4>
+        <div className='exploreCategories'>
+          <Link to='/category/rent'>
+            <img
+              src={rentCategoryImage}
+              alt='category-thumbnail'
+              className='exploreCategoryImg'
+            />
+          </Link>
+        </div>
+      </main>
     </div>
   );
 };
