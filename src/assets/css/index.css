@@ -365,6 +365,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .exploreCategoryHeading {
   margin-top: 3rem;
+  margin-bottom: 1.25rem;
 }
 
 .swiper-container {
@@ -438,7 +439,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   border-radius: 1.5rem;
   object-fit: cover;
-  margin: 0 auto;
+  margin: 0 auto 0.75rem;
 }
 
 .exploreCategoryName {
