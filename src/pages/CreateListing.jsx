@@ -97,7 +97,6 @@ const CreateListing = () => {
               Rent
             </button>
           </div>
-
           <label className='formLabel'>Name</label>
           <input
             type='text'
@@ -109,7 +108,6 @@ const CreateListing = () => {
             maxLength='32'
             required
           />
-
           <div className='formRooms flex'>
             <div>
               <label className='formLabel'>Bedrooms</label>
@@ -139,7 +137,6 @@ const CreateListing = () => {
               />
             </div>
           </div>
-
           <label className='formLabel'>Parking spot</label>
           <div className='formButtons'>
             <button
@@ -165,7 +162,6 @@ const CreateListing = () => {
               No
             </button>
           </div>
-
           <label className='formLabel'>Furnished</label>
           <div className='formButtons'>
             <button
@@ -193,7 +189,6 @@ const CreateListing = () => {
               No
             </button>
           </div>
-
           <label className='formLabel'>Address</label>
           <textarea
             className='formInputName'
@@ -202,7 +197,6 @@ const CreateListing = () => {
             onChange={onMutate}
             required
           ></textarea>
-
           {!geolocationEnabled && (
             <div className='formRooms flex'>
               <div>
@@ -230,7 +224,6 @@ const CreateListing = () => {
               </div>
             </div>
           )}
-
           <label className='formLabel'>Offer</label>
           <div className='formButtons'>
             <button
@@ -254,7 +247,6 @@ const CreateListing = () => {
               No
             </button>
           </div>
-
           <label className='formLabel'>Regular Price</label>
           <div className='formPriceDiv'>
             <input
@@ -270,7 +262,6 @@ const CreateListing = () => {
 
             {type === 'rent' && <p className='formPriceText'>$ / Month</p>}
           </div>
-
           {offer && (
             <>
               <label className='formLabel'>Discounted Price</label>
@@ -286,6 +277,23 @@ const CreateListing = () => {
               />
             </>
           )}
+          <label className='formLabel'>Images</label>
+          <p className='imagesInfo'>
+            The first image will be the cover (max 6).
+          </p>
+          <input
+            type='file'
+            className='formInputFile'
+            id='images'
+            onChange={onMutate}
+            max='6'
+            accept='.jpg,.jpeg,.png'
+            multiple
+            required
+          />
+          <button type='submit' className='primaryButton createListingButton'>
+            Create Listing
+          </button>
         </form>
       </main>
     </div>
